@@ -258,7 +258,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f9619563aba8b7542abf0aabdc638afe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a864710ce554a34386cdb6287b2c5be, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -855,8 +855,8 @@ GameObject:
   - component: {fileID: 4790699579334295540}
   - component: {fileID: 4396598452231163902}
   - component: {fileID: 1800331954083001963}
-  - component: {fileID: 1862612026486915533}
   - component: {fileID: 3390633014872909716}
+  - component: {fileID: 1862612026486915533}
   m_Layer: 5
   m_Name: LoginInterface
   m_TagString: Untagged
@@ -927,18 +927,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1862612026486915533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2954922346346714205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107570eb5a11bd241937e298cb801a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &3390633014872909716
 Animator:
   serializedVersion: 5
@@ -960,6 +948,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1862612026486915533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2954922346346714205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107570eb5a11bd241937e298cb801a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5005833454472878473
 GameObject:
   m_ObjectHideFlags: 0

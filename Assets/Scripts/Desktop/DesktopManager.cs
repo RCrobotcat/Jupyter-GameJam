@@ -8,6 +8,8 @@ public class DesktopManager : Singleton<DesktopManager>
         public RectTransform originalParent;
     }
 
+    [HideInInspector] public bool isWindowOpen;
+
     [Header("Desktop Data")]
     public DesktopData_SO DesktopData;
 

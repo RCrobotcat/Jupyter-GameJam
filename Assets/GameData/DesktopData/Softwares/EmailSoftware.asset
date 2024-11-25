@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   softwareIcon: {fileID: 21300000, guid: ef4c18bd83a1ccb4f93ab1355cec972c, type: 3}
   softwareName: Email
-  softwareClientInterface: {fileID: 0}
+  softwareClientInterface: {fileID: 6882368815124988010, guid: b13cc4ff7ae44d6428a781a497920cce, type: 3}

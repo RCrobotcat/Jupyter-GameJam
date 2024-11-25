@@ -9,7 +9,7 @@ public class SlotHolder : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.clickCount % 2 == 0)
+        if (eventData.clickCount % 2 == 0 && !DesktopManager.Instance.isWindowOpen)
         {
             UseSoftware();
         }
@@ -34,7 +34,10 @@ public class SlotHolder : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
             Debug.Log("Using " + iconUI.GetItem().softwareName);
             Transform parent = DesktopManager.Instance.ClientInterfacePanel;
             if (iconUI.GetItem().softwareClientInterface != null)
+            {
+                DesktopManager.Instance.isWindowOpen = true;
                 Instantiate(iconUI.GetItem().softwareClientInterface, parent);
+            }
         }
     }
 

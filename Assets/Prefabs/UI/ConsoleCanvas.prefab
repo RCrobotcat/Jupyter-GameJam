@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfc90fb02ada4d34ab6a213ba858c912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWindowOpen: 0
   DesktopData: {fileID: 11400000, guid: f8bbc132e0e8dcd4d825f86e0a3a7472, type: 2}
   DesktopUI: {fileID: 4528012444946725585}
   dragCanvas: {fileID: 7276872402365352695}
@@ -264,7 +265,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -120, y: -120}
+  m_SizeDelta: {x: -120, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5236080480524728534
 CanvasRenderer:

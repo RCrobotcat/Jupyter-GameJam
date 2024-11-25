@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   softwareIcon: {fileID: 21300000, guid: d8590171a03d427489836b1f70676475, type: 3}
   softwareName: Log
-  softwareClientInterface: {fileID: 0}
+  softwareClientInterface: {fileID: 6882368815124988010, guid: aa3c53b42f8035f41a0eb2f639240e65, type: 3}
