@@ -20,6 +20,7 @@ public class DesktopManager : Singleton<DesktopManager>
 
     [Header("UI Panels")]
     public GameObject DesktopPanel;
+    public Transform ClientInterfacePanel;
 
     bool isOpen = false;
 
@@ -42,20 +43,6 @@ public class DesktopManager : Singleton<DesktopManager>
             DesktopPanel.SetActive(isOpen);
         }
     }
-
-    /*public void SaveData()
-    {
-        SaveManager.Instance.Save(inventoryData, inventoryData.name);
-        SaveManager.Instance.Save(actionData, actionData.name);
-        SaveManager.Instance.Save(equipmentData, equipmentData.name);
-    }*/
-
-    /*public void LoadData()
-    {
-        SaveManager.Instance.Load(inventoryData, inventoryData.name);
-        SaveManager.Instance.Load(actionData, actionData.name);
-        SaveManager.Instance.Load(equipmentData, equipmentData.name);
-    }*/
 
     public bool CheckInDesktopUI(Vector3 position)
     {

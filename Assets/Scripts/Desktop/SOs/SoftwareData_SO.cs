@@ -5,4 +5,6 @@ public class SoftwareData_SO : ScriptableObject
 {
     public Sprite softwareIcon;
     public string softwareName;
+
+    public GameObject softwareClientInterface;
 }
