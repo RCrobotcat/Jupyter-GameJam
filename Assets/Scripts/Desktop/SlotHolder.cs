@@ -30,7 +30,12 @@ public class SlotHolder : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     public void UseSoftware()
     {
         if (iconUI.GetItem() != null)
+        {
             Debug.Log("Using " + iconUI.GetItem().softwareName);
+            Transform parent = DesktopManager.Instance.ClientInterfacePanel;
+            if (iconUI.GetItem().softwareClientInterface != null)
+                Instantiate(iconUI.GetItem().softwareClientInterface, parent);
+        }
     }
 
     public void UpdateItem()
