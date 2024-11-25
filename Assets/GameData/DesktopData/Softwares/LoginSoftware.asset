@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20b9d2115d0a6a64a800877021ea49dc, type: 3}
   m_Name: LoginSoftware
   m_EditorClassIdentifier: 
-  softwareIcon: {fileID: 21300000, guid: c54f0d8a32e74fe4ba4c5e56da58638e, type: 3}
+  softwareIcon: {fileID: 21300000, guid: 6cc4f6a3205c68e49b799241715d6f4f, type: 3}
   softwareName: Login Console
   softwareClientInterface: {fileID: 2954922346346714205, guid: d793ecd72d4b99147849f012f99c4db7, type: 3}

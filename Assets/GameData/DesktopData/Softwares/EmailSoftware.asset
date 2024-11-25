@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20b9d2115d0a6a64a800877021ea49dc, type: 3}
   m_Name: EmailSoftware
   m_EditorClassIdentifier: 
-  softwareIcon: {fileID: 21300000, guid: ef4c18bd83a1ccb4f93ab1355cec972c, type: 3}
+  softwareIcon: {fileID: 21300000, guid: 97062803b695362449a029b563782d19, type: 3}
   softwareName: Email
   softwareClientInterface: {fileID: 6882368815124988010, guid: b13cc4ff7ae44d6428a781a497920cce, type: 3}

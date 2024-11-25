@@ -39,7 +39,7 @@ public class DesktopManager : Singleton<DesktopManager>
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.T) && !isWindowOpen)
         {
             isOpen = !isOpen;
             DesktopPanel.SetActive(isOpen);
