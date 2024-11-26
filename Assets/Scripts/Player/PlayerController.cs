@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     NavMeshAgent agent;
     float horizontal;
     // float vertical;
-    float stopDistance;
+    public float stopDistance;
     SpriteRenderer playerSprite;
     Animator animator;
 
@@ -18,6 +18,14 @@ public class PlayerController : MonoBehaviour
 
         playerSprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Gate"))
+        {
+            agent.isStopped = true;
+        }
     }
 
     void Update()
@@ -36,6 +44,7 @@ public class PlayerController : MonoBehaviour
 
         if (horizontal < 0)
         {
+            agent.isStopped = false;
             playerSprite.flipX = false;
         }
         else if (horizontal > 0)
