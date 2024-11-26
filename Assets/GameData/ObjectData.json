@@ -1,0 +1,10 @@
+{
+    "infos": [
+        {
+            "Io_name": "123",
+            "name": "Ancient Artifact",
+            "description": "The Stranger's inhabitants created to connect to the simulation",
+            "discovered": false
+        }
+    ]
+}
