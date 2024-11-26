@@ -50,7 +50,7 @@ public class InteractionManager : Singleton<InteractionManager>
   
     /// 根据 Io_name 获取对象信息
 
-    private InteractiveObjectInfo GetInfoByName(string ioName)
+    public InteractiveObjectInfo GetInfoByName(string ioName)
     {
         if (interactiveObjectInfos == null)
         {
