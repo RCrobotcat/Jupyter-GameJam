@@ -12,6 +12,7 @@ public class InteractiveObject : MonoBehaviour
 
     public Material[] originalMaterials; // 原始材质列表
     public Material[] materialsWithOutline; // 包含 Outline 的材质列表
+
     private void Awake()
     {
         if (string.IsNullOrEmpty(Io_name))
@@ -62,8 +63,11 @@ public class InteractiveObject : MonoBehaviour
             MouseDetect();
         else
         {
-            isMouseOver = false;
-            InteractionEvents.OnMouseExit?.Invoke(this);
+            if (isMouseOver)
+            {
+                isMouseOver = false;
+                InteractionEvents.OnMouseExit?.Invoke(this);
+            }
         }
     }
 

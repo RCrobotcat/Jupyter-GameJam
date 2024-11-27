@@ -16,5 +16,10 @@ public class ContainerUI : MonoBehaviour
     public void AnimationEvent()
     {
         DesktopManager.Instance.DesktopPanel.SetActive(DesktopManager.Instance.isOpen);
+        DesktopManager.Instance.isWindowOpen = false;
+        foreach (Transform window in DesktopManager.Instance.ClientInterfacePanel)
+        {
+            Destroy(window.gameObject);
+        }
     }
 }
