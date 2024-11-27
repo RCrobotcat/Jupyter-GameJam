@@ -12,4 +12,9 @@ public class ContainerUI : MonoBehaviour
             slots[i].UpdateItem();
         }
     }
+
+    public void AnimationEvent()
+    {
+        DesktopManager.Instance.DesktopPanel.SetActive(DesktopManager.Instance.isOpen);
+    }
 }

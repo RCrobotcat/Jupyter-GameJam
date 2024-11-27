@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour
 {
-    
+
     public string Io_name;
 
     private bool isMouseOver = false;
@@ -19,9 +19,9 @@ public class InteractiveObject : MonoBehaviour
             Io_name = this.name;
         }
 
-        
+
         Renderer renderer = GetComponent<Renderer>();
-        
+
         if (renderer != null)
         {
             // 获取当前材质列表
@@ -45,20 +45,26 @@ public class InteractiveObject : MonoBehaviour
             }
         }
 
-        
+
         if (GetComponent<Renderer>() != null && GetComponent<Renderer>().materials.Length > 0)
         {
-           
-            emiMaterial= GetComponent<Renderer>().materials[0]; 
-           
+
+            emiMaterial = GetComponent<Renderer>().materials[0];
+
         }
-       
-        
+
+
     }
 
     private void Update()
-    {   
-        MouseDetect();
+    {
+        if (!DesktopManager.Instance.isOpen)
+            MouseDetect();
+        else
+        {
+            isMouseOver = false;
+            InteractionEvents.OnMouseExit?.Invoke(this);
+        }
     }
 
     private void MouseDetect()
@@ -87,6 +93,7 @@ public class InteractiveObject : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        InteractionEvents.OnMouseClick?.Invoke(this);
+        if (isMouseOver)
+            InteractionEvents.OnMouseClick?.Invoke(this);
     }
 }

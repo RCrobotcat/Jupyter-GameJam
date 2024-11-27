@@ -8,7 +8,8 @@ public class DesktopManager : Singleton<DesktopManager>
         public RectTransform originalParent;
     }
 
-    [HideInInspector] public bool isWindowOpen;
+    [HideInInspector] public bool isWindowOpen; // 是否打开了某个小窗口
+    [HideInInspector] public bool isOpen = false; // 是否打开了桌面
 
     [Header("Desktop Data")]
     public DesktopData_SO DesktopData;
@@ -23,8 +24,10 @@ public class DesktopManager : Singleton<DesktopManager>
     [Header("UI Panels")]
     public GameObject DesktopPanel;
     public Transform ClientInterfacePanel;
+    public GameObject CloseBtn;
 
-    bool isOpen = false;
+    [Header("Animator")]
+    public Animator DesktopUIAnimator;
 
     protected override void Awake()
     {
@@ -35,15 +38,6 @@ public class DesktopManager : Singleton<DesktopManager>
     {
         // LoadData();
         DesktopUI.RefreshUI();
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T) && !isWindowOpen)
-        {
-            isOpen = !isOpen;
-            DesktopPanel.SetActive(isOpen);
-        }
     }
 
     public bool CheckInDesktopUI(Vector3 position)
@@ -57,5 +51,17 @@ public class DesktopManager : Singleton<DesktopManager>
                 return true;
         }
         return false;
+    }
+
+    public void OpenDesktopPanel()
+    {
+        isOpen = !isOpen;
+        if (!isOpen)
+            DesktopUIAnimator.SetTrigger("Close");
+        else
+        {
+            DesktopPanel.SetActive(isOpen);
+            CloseBtn.SetActive(isOpen);
+        }
     }
 }
