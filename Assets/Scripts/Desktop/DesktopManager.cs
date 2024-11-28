@@ -32,6 +32,14 @@ public class DesktopManager : Singleton<DesktopManager>
     [Header("Animator")]
     public Animator DesktopUIAnimator;
 
+    [Header("WorldSpace Tips Panel")]
+    public GameObject computerTipsPanel;
+
+    /// <summary>
+    /// 即将要传送的场景
+    /// </summary>
+    [HideInInspector] public string alarmSceneToBeTransited = "";
+
     protected override void Awake()
     {
         base.Awake();

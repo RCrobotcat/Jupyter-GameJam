@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using DG.Tweening;
+using JetBrains.Annotations;
 
 public class TimePanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -24,6 +25,14 @@ public class TimePanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public Transform childhoodTransform;
     public Transform middleTransform;
     public Transform elderTransform;
+
+    void Awake()
+    {
+        mainBtn.onClick.AddListener(MainBtnClick);
+        childhoodBtn.onClick.AddListener(ChildhoodBtnClick);
+        middleBtn.onClick.AddListener(MiddleBtnClick);
+        elderBtn.onClick.AddListener(ElderBtnClick);
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -84,6 +93,52 @@ public class TimePanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             elderTransform.SetSiblingIndex(3);
         }
     }
+
+    #region Button Events
+    public void MainBtnClick()
+    {
+        Debug.Log("MainBtnClick");
+        DesktopManager.Instance.OpenDesktopPanel();
+        DesktopManager.Instance.CloseBtn.SetActive(false);
+        DesktopManager.Instance.buttom.SetActive(false);
+
+        DesktopManager.Instance.computerTipsPanel.SetActive(true);
+        DesktopManager.Instance.alarmSceneToBeTransited = "Room_main";
+    }
+
+    public void ChildhoodBtnClick()
+    {
+        Debug.Log("ChildhoodBtnClick");
+        DesktopManager.Instance.OpenDesktopPanel();
+        DesktopManager.Instance.CloseBtn.SetActive(false);
+        DesktopManager.Instance.buttom.SetActive(false);
+
+        DesktopManager.Instance.computerTipsPanel.SetActive(true);
+        DesktopManager.Instance.alarmSceneToBeTransited = "Room_childhood";
+    }
+
+    public void MiddleBtnClick()
+    {
+        Debug.Log("MiddleBtnClick");
+        DesktopManager.Instance.OpenDesktopPanel();
+        DesktopManager.Instance.CloseBtn.SetActive(false);
+        DesktopManager.Instance.buttom.SetActive(false);
+
+        DesktopManager.Instance.computerTipsPanel.SetActive(true);
+        DesktopManager.Instance.alarmSceneToBeTransited = "Room_middle";
+    }
+
+    public void ElderBtnClick()
+    {
+        Debug.Log("ElderBtnClick");
+        DesktopManager.Instance.OpenDesktopPanel();
+        DesktopManager.Instance.CloseBtn.SetActive(false);
+        DesktopManager.Instance.buttom.SetActive(false);
+
+        DesktopManager.Instance.computerTipsPanel.SetActive(true);
+        DesktopManager.Instance.alarmSceneToBeTransited = "Room_elder";
+    }
+    #endregion
 
     // Animation Event
     public void TimePanelClose()

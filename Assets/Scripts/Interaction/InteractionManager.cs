@@ -157,6 +157,12 @@ public class InteractionManager : Singleton<InteractionManager>
         {
             DesktopManager.Instance.OpenDesktopPanel();
         }
+
+        // 点击床睡觉，进行时间跳转
+        if (obj.transform.CompareTag("Bed") && DesktopManager.Instance.alarmSceneToBeTransited != "")
+        {
+            SceneController.Instance.TransitionToSceneHandler(DesktopManager.Instance.alarmSceneToBeTransited);
+        }
     }
 
     // 包装器类  JSON 列表反序列化

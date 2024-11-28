@@ -35,8 +35,6 @@ public class Bottom : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OpenTimePanel()
     {
-        Debug.Log("Open TimePanel");
-
         if (!isAnimating)
         {
             timePanelIsOpen = !timePanelIsOpen;
