@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 8092945828140248423}
   - component: {fileID: 2905072274147114608}
   m_Layer: 5
-  m_Name: anwser1
+  m_Name: anwser2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -749,7 +749,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: RCrobotcat
+  m_Text: Adrian Krest
 --- !u!114 &6302237191146860129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,6 +857,7 @@ GameObject:
   - component: {fileID: 1800331954083001963}
   - component: {fileID: 3390633014872909716}
   - component: {fileID: 1862612026486915533}
+  - component: {fileID: 1916758990156350333}
   m_Layer: 5
   m_Name: LoginInterface
   m_TagString: Untagged
@@ -960,6 +961,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107570eb5a11bd241937e298cb801a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1916758990156350333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2954922346346714205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c83de9fc73bdc6408b72d3fda0f2c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loginButton: {fileID: 7196729583689603621}
+  userName: {fileID: 7652596764745646714}
+  q1: {fileID: 8258835978156544080}
+  q2: {fileID: 2905072274147114608}
+  q3: {fileID: 3269776845351795840}
 --- !u!1 &5005833454472878473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,7 +1582,7 @@ GameObject:
   - component: {fileID: 6719686228275036352}
   - component: {fileID: 3269776845351795840}
   m_Layer: 5
-  m_Name: anwser1
+  m_Name: anwser3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
