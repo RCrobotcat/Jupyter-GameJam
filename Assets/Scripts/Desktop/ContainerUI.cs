@@ -15,6 +15,7 @@ public class ContainerUI : MonoBehaviour
 
     public void AnimationEvent()
     {
+        DesktopManager.Instance.isAnimating = false;
         DesktopManager.Instance.DesktopPanel.SetActive(DesktopManager.Instance.isOpen);
         DesktopManager.Instance.isWindowOpen = false;
         foreach (Transform window in DesktopManager.Instance.ClientInterfacePanel)

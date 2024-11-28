@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using System.IO;
 
@@ -150,7 +149,10 @@ public class InteractionManager : Singleton<InteractionManager>
         }
 
         // 打开桌面UI
-        if (obj.transform.CompareTag("Computer") && !DesktopManager.Instance.isWindowOpen)
+        if (obj.transform.CompareTag("Computer")
+            && !DesktopManager.Instance.isWindowOpen
+            && !DesktopManager.Instance.isAnimating
+            && !LogManager.Instance.isOpen)
         {
             DesktopManager.Instance.OpenDesktopPanel();
         }

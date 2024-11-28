@@ -17,9 +17,9 @@ public class LoginInterface : MonoBehaviour
     public void Login()
     {
         if (userName.text == AnswerConfig.userName
-            && q1.text == AnswerConfig.Answer_1
-            && q2.text == AnswerConfig.Answer_2
-            && q3.text == AnswerConfig.Answer_3)
+            && q1.text.ToLower() == AnswerConfig.Answer_1.ToLower()
+            && q2.text.ToLower() == AnswerConfig.Answer_2.ToLower()
+            && q3.text.ToLower() == AnswerConfig.Answer_3.ToLower())
         {
             Debug.Log("Login Success");
             // TODO

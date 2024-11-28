@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         settingBtn.onClick.AddListener(OpenSetting);
         quitBtn.onClick.AddListener(QuitGame);
     }
-
+     
     public void OnPointerEnter(PointerEventData eventData)
     {
         GameObject go = eventData.pointerEnter;

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LoginSoftware
   m_EditorClassIdentifier: 
   softwareIcon: {fileID: 21300000, guid: 6cc4f6a3205c68e49b799241715d6f4f, type: 3}
-  softwareName: Login Console
+  softwareName: "\u7EC8\u7AEF\u767B\u5F55"
   softwareClientInterface: {fileID: 2954922346346714205, guid: d793ecd72d4b99147849f012f99c4db7, type: 3}
