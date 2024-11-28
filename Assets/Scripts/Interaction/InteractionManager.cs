@@ -12,6 +12,7 @@ public class InteractionManager : Singleton<InteractionManager>
     protected override void Awake()
     {
         base.Awake();
+        DontDestroyOnLoad(this);
         LoadJson(GetJsonFilePath()); // 加载 JSON 文件
     }
     private string GetJsonFilePath()

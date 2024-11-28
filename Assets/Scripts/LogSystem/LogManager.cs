@@ -54,6 +54,12 @@ public class LogManager : Singleton<LogManager>
     /// </summary>
     public void AddLogData(LogData_SO data)
     {
+        if (logList.logDatas.Find(logList => logList.logData == data) != null)
+        {
+            Debug.Log("Already Contained this log in loglist.");
+            return;
+        }
+
         LogData logData = new LogData();
         logData.logData = data;
         logList.logDatas.Add(logData);

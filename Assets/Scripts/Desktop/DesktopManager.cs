@@ -25,6 +25,7 @@ public class DesktopManager : Singleton<DesktopManager>
     [Header("UI Panels")]
     public GameObject DesktopPanel;
     public Transform ClientInterfacePanel;
+    public TimePanel timePanel;
     public GameObject CloseBtn;
     public GameObject buttom;
 
@@ -57,10 +58,10 @@ public class DesktopManager : Singleton<DesktopManager>
 
     public void OpenDesktopPanel()
     {
-        isAnimating = true;
         isOpen = !isOpen;
         if (!isOpen)
         {
+            isAnimating = true;
             DesktopUIAnimator.SetTrigger("Close");
         }
         else
