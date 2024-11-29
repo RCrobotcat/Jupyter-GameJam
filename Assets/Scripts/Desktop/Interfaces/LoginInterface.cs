@@ -14,9 +14,14 @@ public class LoginInterface : MonoBehaviour
         loginButton.onClick.AddListener(Login);
     }
 
+    void Start()
+    {
+        userName.text = GameManager.Instance.currentUserName;
+    }
+
     public void Login()
     {
-        if (userName.text == AnswerConfig.userName
+        if (userName.text.ToLower() == AnswerConfig.userName.ToLower()
             && q1.text.ToLower() == AnswerConfig.Answer_1.ToLower()
             && q2.text.ToLower() == AnswerConfig.Answer_2.ToLower()
             && q3.text.ToLower() == AnswerConfig.Answer_3.ToLower())

@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public Button settingBtn;
     public Button quitBtn;
 
+    public GameObject settingPanel;
+
     void Awake()
     {
         SetBtnsNotHover();
@@ -15,7 +17,7 @@ public class MainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         settingBtn.onClick.AddListener(OpenSetting);
         quitBtn.onClick.AddListener(QuitGame);
     }
-     
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         GameObject go = eventData.pointerEnter;
@@ -49,13 +51,13 @@ public class MainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void StartGame()
     {
         Debug.Log("Start Game");
-        // TODO
+        SceneController.Instance.TransitionToSceneHandler("Room_main");
     }
 
     public void OpenSetting()
     {
         Debug.Log("Open Setting");
-        // TODO
+        settingPanel.SetActive(true);
     }
 
     public void QuitGame()
@@ -69,15 +71,15 @@ public class MainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     void SetBtnsNotHover()
     {
         Color color_start = startBtn.GetComponent<Image>().color;
-        color_start.a = 0.1f;
+        color_start.a = 0;
         startBtn.GetComponent<Image>().color = color_start;
 
         Color color_setting = settingBtn.GetComponent<Image>().color;
-        color_setting.a = 0.1f;
+        color_setting.a = 0;
         settingBtn.GetComponent<Image>().color = color_setting;
 
         Color color_quit = quitBtn.GetComponent<Image>().color;
-        color_quit.a = 0.1f;
+        color_quit.a = 0;
         quitBtn.GetComponent<Image>().color = color_quit;
     }
 }

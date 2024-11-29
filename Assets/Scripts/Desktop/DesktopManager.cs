@@ -48,14 +48,14 @@ public class DesktopManager : Singleton<DesktopManager>
     void Start()
     {
         // LoadData();
-        DesktopUI.RefreshUI();
+        if (DesktopUI != null)
+            DesktopUI.RefreshUI();
     }
 
     public bool CheckInDesktopUI(Vector3 position)
     {
         for (int i = 0; i < DesktopUI.slots.Length; i++)
         {
-            // same as => (RectTransform) inventoryUI.slots[i].transform, typecasting
             RectTransform t = DesktopUI.slots[i].transform as RectTransform;
 
             if (RectTransformUtility.RectangleContainsScreenPoint(t, position))

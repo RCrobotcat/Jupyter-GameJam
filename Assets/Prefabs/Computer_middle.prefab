@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 3809381789811581176}
   - component: {fileID: 6593900126869552074}
   m_Layer: 0
-  m_Name: Computer_childhood
+  m_Name: Computer_middle
   m_TagString: Computer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
