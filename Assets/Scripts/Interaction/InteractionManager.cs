@@ -104,8 +104,8 @@ public class InteractionManager : Singleton<InteractionManager>
         // materialInstance_emi.SetFloat("_is_HighLighted", 1.0f);
         Debug.Log($"length: {materials.Length}.");
         // 更新材质数组
-        materials[materials.Length-1] = materialInstance_emi;
-        materials[materials.Length-2] = materialInstance_out;
+        materials[materials.Length - 1] = materialInstance_emi;
+        materials[materials.Length - 2] = materialInstance_out;
 
         renderer.materials = materials;
 
@@ -162,6 +162,20 @@ public class InteractionManager : Singleton<InteractionManager>
         if (obj.transform.CompareTag("Bed") && DesktopManager.Instance.alarmSceneToBeTransited != "")
         {
             SceneController.Instance.TransitionToSceneHandler(DesktopManager.Instance.alarmSceneToBeTransited);
+        }
+
+        // 点击笼子, 打开密码输入框
+        if (obj.transform.CompareTag("Cage")
+            && !DesktopManager.Instance.isWindowOpen
+            && !DesktopManager.Instance.isAnimating
+            && !CagePasswordLock.Instance.unlocked)
+        {
+            if (!CagePasswordLock.Instance.isPasswordLockPanelActive)
+                CagePasswordLock.Instance.OpenPasswordLockPanel();
+            else
+            {
+                CagePasswordLock.Instance.ClosePasswordLockPanel();
+            }
         }
     }
 
