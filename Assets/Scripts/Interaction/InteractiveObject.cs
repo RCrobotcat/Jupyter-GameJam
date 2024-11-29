@@ -33,21 +33,13 @@ public class InteractiveObject : MonoBehaviour
             originalMaterials = renderer.materials;
 
             // 创建包含 Outline 的材质列表
-            materialsWithOutline = new Material[originalMaterials.Length + 2];
+            materialsWithOutline = new Material[originalMaterials.Length ];
             for (int i = 0; i < originalMaterials.Length; i++)
             {
                 materialsWithOutline[i] = originalMaterials[i];
             }
 
-            // 设置 Outline 材质（需要在 Inspector 中指定）
-            if (outlineMaterial != null)
-            {
-                materialsWithOutline[materialsWithOutline.Length - 1] = outlineMaterial;
-            }
-            else
-            {
-                Debug.LogError("Outline material not assigned in Inspector!");
-            }
+  
             
 
         }

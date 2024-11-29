@@ -104,8 +104,8 @@ public class InteractionManager : Singleton<InteractionManager>
         // materialInstance_emi.SetFloat("_is_HighLighted", 1.0f);
         Debug.Log($"length: {materials.Length}.");
         // 更新材质数组
-        materials[1] = materialInstance_emi;
-        materials[2] = materialInstance_out;
+        materials[materials.Length-1] = materialInstance_emi;
+        materials[materials.Length-2] = materialInstance_out;
 
         renderer.materials = materials;
 
