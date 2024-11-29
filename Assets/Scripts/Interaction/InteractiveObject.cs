@@ -96,6 +96,13 @@ public class InteractiveObject : MonoBehaviour
                             tipsPanelAnimator.SetTrigger("Open");
                             isAnimating = false;
                         }
+
+                        // 如果是可以获取的线索, 则添加日志信息
+                        if (this.gameObject.GetComponent<LogGiver>() != null)
+                        {
+                            LogGiver logGiver = this.gameObject.GetComponent<LogGiver>();
+                            logGiver.GiveLog();
+                        }
                     }
 
                     InteractionEvents.OnMouseHover?.Invoke(this);

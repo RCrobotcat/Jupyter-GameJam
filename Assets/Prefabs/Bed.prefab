@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 1041964476595355542}
   - component: {fileID: 7732717681504346136}
   - component: {fileID: 6507269251729822776}
+  - component: {fileID: 8057821829025353185}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Bed
@@ -325,6 +326,19 @@ MonoBehaviour:
   TipsPanel: {fileID: 7674768106723905850}
   tipsPanelAnimator: {fileID: 1165996207357092829}
   isAnimating: 0
+--- !u!114 &8057821829025353185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7038035535395995997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0003818d54a51984fbd9812b905c3331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logData: {fileID: 11400000, guid: 030d225a5fb7099449946b7b06dc9f2f, type: 2}
 --- !u!1 &7674768106723905850
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,6 +25,9 @@ public class LogManager : Singleton<LogManager>
     [Header("Log Content Text")]
     public Text logContentText;
 
+    [Header("Tips Panel")]
+    public GameObject logAddedTips;
+
     protected override void Awake()
     {
         base.Awake();
@@ -34,6 +37,9 @@ public class LogManager : Singleton<LogManager>
     {
         if (Input.GetKeyDown(KeyCode.L) && !isAnimating)
         {
+            if (logAddedTips.activeSelf)
+                logAddedTips.SetActive(false);
+
             isOpen = !isOpen;
             if (!isOpen)
             {
@@ -60,6 +66,7 @@ public class LogManager : Singleton<LogManager>
             return;
         }
 
+        logAddedTips.SetActive(true);
         LogData logData = new LogData();
         logData.logData = data;
         logList.logDatas.Add(logData);
