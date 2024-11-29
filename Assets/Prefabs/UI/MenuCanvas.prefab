@@ -1551,6 +1551,7 @@ MonoBehaviour:
   windowBtn: {fileID: 2001265016588777250}
   fullscreenBtn: {fileID: 7648982482047061615}
   setBtn: {fileID: 5937249140929044429}
+  returnToMainBtn: {fileID: 0}
   successSetTips: {fileID: 3767654332276595300}
 --- !u!1 &3951380268601926427
 GameObject:
@@ -2303,6 +2304,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5537159621605390106}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3767654332276595300}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
