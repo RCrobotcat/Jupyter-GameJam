@@ -28,19 +28,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor:
-        m_Texture: {fileID: 2800000, guid: c4e083bbe90dd1b4c93f5eaa4892d3bd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 16e5e0f69f2ed1f4f9db91b77ddbfbbe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Height_Obj:
-        m_Texture: {fileID: 2800000, guid: 226888e17122a4545aa282aef1f205e9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 09170b5cd6754e74cbad532ebcaad538, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
-        m_Texture: {fileID: 2800000, guid: d7f5387ced631d24b987788e922ef292, type: 3}
+        m_Texture: {fileID: 2800000, guid: 710a6168b92f690418d5b615aab99cff, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Roughness:
-        m_Texture: {fileID: 2800000, guid: d068c02fe52f52248b934e9ba7a4f8ed, type: 3}
+        m_Texture: {fileID: 2800000, guid: 867a74b05e7246d47a12683fc7c8b2dd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Specular:
@@ -77,8 +77,8 @@ Material:
     - _POM_Scale: -0.5
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Roughness_max: 0.98
-    - _Roughness_min: 0.262
+    - _Roughness_max: 0.665
+    - _Roughness_min: 0.072
     - _tiling: 0.16
     m_Colors:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

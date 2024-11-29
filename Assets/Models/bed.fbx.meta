@@ -3,7 +3,32 @@ guid: 6bd386d467e95384ca5fdf9a82d9c329
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DA_SUEDE_GREY.003
+    second: {fileID: 2100000, guid: 6c47f1198583af540aff0835a7fe53f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DA_Sheet_props
+    second: {fileID: 2100000, guid: 36701ae0797d5414281d0c8ff909089b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: b548ea45b2f19034fbf97081d5ea8e42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 614145253f4a855429db1e30378cf53b, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Fabric060_2K_NormalDX
+    second: {fileID: 2800000, guid: 4b86d285a83af0f48a8c246b3b068b89, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
