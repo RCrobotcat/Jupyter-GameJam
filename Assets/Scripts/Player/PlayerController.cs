@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class PlayerController : MonoBehaviour
     public float stopDistance;
     SpriteRenderer playerSprite;
     Animator animator;
+
+    // 玩家头上的提示面板
+    public Image logTipsIcon;
+    public Text logTipsText;
 
     void Awake()
     {
