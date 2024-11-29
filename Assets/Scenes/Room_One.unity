@@ -1693,7 +1693,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -2793,6 +2793,9 @@ MonoBehaviour:
   emiMaterial: {fileID: 2100000, guid: 3610fa53d5af5b64888e26d3b7ae50c4, type: 2}
   originalMaterials: []
   materialsWithOutline: []
+  TipsPanel: {fileID: 0}
+  tipsPanelAnimator: {fileID: 0}
+  isAnimating: 0
 --- !u!1 &1214514329
 GameObject:
   m_ObjectHideFlags: 0
@@ -3548,6 +3551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopDistance: 0
+  logTipsIcon: {fileID: 0}
+  logTipsText: {fileID: 0}
 --- !u!212 &1861354893
 SpriteRenderer:
   m_ObjectHideFlags: 0

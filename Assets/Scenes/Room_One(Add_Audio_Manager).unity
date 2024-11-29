@@ -1795,7 +1795,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912955002}
   serializedVersion: 2
-  m_LocalRotation: {x: -2.1299483e-16, y: 0.99824554, z: -0.05921034, w: -3.664007e-15}
+  m_LocalRotation: {x: -0.0000000017783388, y: 0.99824554, z: -0.059210368, w: -0.000000029981553}
   m_LocalPosition: {x: 8.3, y: 5.67, z: 13.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2000,7 +2000,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -2014,7 +2014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975976071}
   serializedVersion: 2
-  m_LocalRotation: {x: -2.1299483e-16, y: 0.99824554, z: -0.05921034, w: -3.664007e-15}
+  m_LocalRotation: {x: -0.0000000017783388, y: 0.99824554, z: -0.059210368, w: -0.000000029981553}
   m_LocalPosition: {x: 8.3, y: 5.67, z: 13.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4299,6 +4299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopDistance: 0
+  logTipsIcon: {fileID: 0}
+  logTipsText: {fileID: 0}
 --- !u!212 &1861354893
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4703,6 +4705,9 @@ MonoBehaviour:
   emiMaterial: {fileID: 2100000, guid: 3610fa53d5af5b64888e26d3b7ae50c4, type: 2}
   originalMaterials: []
   materialsWithOutline: []
+  TipsPanel: {fileID: 0}
+  tipsPanelAnimator: {fileID: 0}
+  isAnimating: 0
 --- !u!1 &1980650696
 GameObject:
   m_ObjectHideFlags: 0
