@@ -63,7 +63,7 @@ public class InteractiveObject : MonoBehaviour
 
     private void Update()
     {
-        if (!DesktopManager.Instance.isOpen)
+        if (!DesktopManager.Instance.isOpen && !Esc.Instance.isEscPanelActive)
             MouseDetect();
         else
         {

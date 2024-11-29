@@ -31,6 +31,20 @@ public class SceneController : Singleton<SceneController>
 
     }
 
+    public void StartGame()
+    {
+        logList.logDatas.Clear();
+        StartCoroutine(LoadMainRoomScene());
+    }
+    IEnumerator LoadMainRoomScene()
+    {
+        SceneFader fade = Instantiate(sceneFaderPrefab);
+        yield return StartCoroutine(fade.FadeOut(1.5f));
+        yield return SceneManager.LoadSceneAsync("Room_main");
+        yield return StartCoroutine(fade.FadeIn(1.5f));
+        yield break;
+    }
+
     public void ReturnToMainMenu()
     {
         logList.logDatas.Clear();
@@ -39,7 +53,7 @@ public class SceneController : Singleton<SceneController>
     IEnumerator LoadMainMenu()
     {
         SceneFader fade = Instantiate(sceneFaderPrefab);
-        yield return StartCoroutine(fade.FadeOut(3.5f));
+        yield return StartCoroutine(fade.FadeOut(1.5f));
         yield return SceneManager.LoadSceneAsync("MainMenu");
         yield return StartCoroutine(fade.FadeIn(1.5f));
         yield break;

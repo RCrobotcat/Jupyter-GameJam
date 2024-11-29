@@ -10,6 +10,8 @@ public class Settings : MonoBehaviour
     public Button fullscreenBtn;
     public Button setBtn;
 
+    public Button returnToMainBtn;
+
     public GameObject successSetTips;
 
     void Awake()
@@ -18,6 +20,16 @@ public class Settings : MonoBehaviour
         fullscreenBtn.onClick.AddListener(FullScreen);
 
         setBtn.onClick.AddListener(SuccessSet);
+
+        if (returnToMainBtn != null)
+        {
+            returnToMainBtn.onClick.AddListener(ReturnToMainMenu);
+        }
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneController.Instance.ReturnToMainMenu();
     }
 
     public void SuccessSet()

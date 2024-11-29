@@ -51,7 +51,7 @@ public class MainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void StartGame()
     {
         Debug.Log("Start Game");
-        SceneController.Instance.TransitionToSceneHandler("Room_main");
+        SceneController.Instance.StartGame();
     }
 
     public void OpenSetting()

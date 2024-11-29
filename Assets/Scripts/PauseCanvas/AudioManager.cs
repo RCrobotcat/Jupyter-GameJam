@@ -1,10 +1,6 @@
-using AmplifyShaderEditor;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Rendering;
 
 public class AudioManager : MonoBehaviour
 {
@@ -30,7 +26,7 @@ public class AudioManager : MonoBehaviour
         GetVloume();  //获取音频参数
         SetVloume();  //设置音频参数
     }
-    public void GetVloume( )
+    public void GetVloume()
     {
         mixer.GetFloat("MasterVolume", out amount);
     }

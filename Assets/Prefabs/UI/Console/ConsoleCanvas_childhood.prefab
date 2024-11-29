@@ -1692,6 +1692,8 @@ MonoBehaviour:
   CloseBtn: {fileID: 5179023698181626083}
   buttom: {fileID: 96924229421160790}
   DesktopUIAnimator: {fileID: 8993966738163356286}
+  computerTipsPanel: {fileID: 0}
+  alarmSceneToBeTransited: 
 --- !u!1 &5446064555952441370
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,7 +2660,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8834185, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4138114533580228625}
