@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class LogGiver : MonoBehaviour
 {
@@ -33,8 +34,11 @@ public class LogGiver : MonoBehaviour
     {
         if (_intrigger)
         {
-            player.logTipsIcon.DOColor(new Color(255, 248, 0, 255), 0.5f);
-            player.logTipsText.DOColor(new Color(255, 100, 0, 255), 0.5f);
+            if (LogManager.Instance.logList.logDatas.Find(log => log.logData == logData) == null)
+            {
+                player.logTipsIcon.DOColor(new Color(255, 248, 0, 255), 0.5f);
+                player.logTipsText.DOColor(new Color(255, 100, 0, 255), 0.5f);
+            }
 
             // 按E键添加日志数据
             if (Input.GetKeyDown(KeyCode.E))

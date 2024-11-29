@@ -262,8 +262,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3610fa53d5af5b64888e26d3b7ae50c4, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e4e32d8a29066a047be8f716907b0527, type: 2}
+  - {fileID: 2100000, guid: 6903ff8c8d03cee499ca7560a1a08d14, type: 2}
+  - {fileID: 2100000, guid: 6903ff8c8d03cee499ca7560a1a08d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -320,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Io_name: 
   outlineMaterial: {fileID: 2100000, guid: 31b02e5f15b95dc459a4a0e647167e71, type: 2}
-  emiMaterial: {fileID: 2100000, guid: 3610fa53d5af5b64888e26d3b7ae50c4, type: 2}
+  emiMaterial: {fileID: 2100000, guid: 50a0378d6d0687a43beba8e9fe4be46a, type: 2}
   originalMaterials: []
   materialsWithOutline: []
   TipsPanel: {fileID: 7674768106723905850}
