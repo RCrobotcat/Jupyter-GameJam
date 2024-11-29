@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour
@@ -12,6 +11,11 @@ public class InteractiveObject : MonoBehaviour
 
     public Material[] originalMaterials; // 原始材质列表
     public Material[] materialsWithOutline; // 包含 Outline 的材质列表
+
+    [Header("Tips Panel")]
+    public GameObject TipsPanel;
+    public Animator tipsPanelAnimator;
+    [HideInInspector] public bool isAnimating;
 
     private void Awake()
     {
@@ -83,6 +87,20 @@ public class InteractiveObject : MonoBehaviour
                 if (!isMouseOver)
                 {
                     isMouseOver = true;
+
+                    if (TipsPanel != null)
+                    {
+                        if (!TipsPanel.activeSelf)
+                        {
+                            TipsPanel.SetActive(true);
+                        }
+                        else
+                        {
+                            tipsPanelAnimator.SetTrigger("Open");
+                            isAnimating = false;
+                        }
+                    }
+
                     InteractionEvents.OnMouseHover?.Invoke(this);
                 }
                 return;
@@ -92,6 +110,13 @@ public class InteractiveObject : MonoBehaviour
         if (isMouseOver)
         {
             isMouseOver = false;
+
+            if (TipsPanel != null && TipsPanel.activeSelf && !isAnimating)
+            {
+                isAnimating = true;
+                tipsPanelAnimator.SetTrigger("Close");
+            }
+
             InteractionEvents.OnMouseExit?.Invoke(this);
         }
     }
