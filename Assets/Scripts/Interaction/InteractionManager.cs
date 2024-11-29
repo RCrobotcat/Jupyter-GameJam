@@ -101,11 +101,11 @@ public class InteractionManager : Singleton<InteractionManager>
         Material materialInstance_emi = new Material(obj.emiMaterial);
         Material materialInstance_out = new Material(obj.outlineMaterial);
         // 设置高亮属性
-        materialInstance_emi.SetFloat("_is_HighLighted", 1.0f);
-
+        // materialInstance_emi.SetFloat("_is_HighLighted", 1.0f);
+        Debug.Log($"length: {materials.Length}.");
         // 更新材质数组
-        materials[0] = materialInstance_emi;
-        materials[1] = materialInstance_out;
+        materials[1] = materialInstance_emi;
+        materials[2] = materialInstance_out;
 
         renderer.materials = materials;
 
