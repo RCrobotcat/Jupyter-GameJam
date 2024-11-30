@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +10,10 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        SettingBtn.onClick.AddListener(pausePanelControl);
+        if(SettingBtn != null)      //ø’÷µ±£ª§
+        {
+            SettingBtn.onClick.AddListener(pausePanelControl);
+        }
     }
 
     private void Update()

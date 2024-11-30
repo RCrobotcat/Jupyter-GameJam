@@ -44,7 +44,7 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BGMAudioMix
+  m_Name: AudioMix
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
@@ -110,7 +110,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: 6f925607b08642346bff5a11aff1f84d
   m_FloatValues:
     17eb7b618c7025242ade0360d8ba7a15: 20
-    a3a79a4679cb63e43b112e1680e62efc: -9.58135
+    a3a79a4679cb63e43b112e1680e62efc: -19.590876
   m_TransitionOverrides: {}
 --- !u!244 &4614387569096998892
 AudioMixerEffectController:
