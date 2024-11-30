@@ -38,9 +38,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
-    - _HighlightSpeed: 60
-    - _MaxHighLightLevel: 0.9411765
-    - _MinHighLightLevel: 0.7838005
+    - _HighlightSpeed: 34.6
+    - _MaxHighLightLevel: 0.437
+    - _MinHighLightLevel: 0.16
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
