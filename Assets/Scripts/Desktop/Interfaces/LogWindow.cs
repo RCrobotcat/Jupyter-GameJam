@@ -11,7 +11,8 @@ public class LogWindow : MonoBehaviour
 
     void Awake()
     {
-        viewBtn.onClick.AddListener(ViewDiaryContents);
+        if (viewBtn != null)
+            viewBtn.onClick.AddListener(ViewDiaryContents);
     }
 
     void ViewDiaryContents()

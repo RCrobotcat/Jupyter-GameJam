@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58b64b549c57f1e49a231dcefb19e7d4, type: 3}
-  m_Name: DesktopData_1
+  m_Name: DesktopData_elder
   m_EditorClassIdentifier: 
   softwares:
   - softwareData: {fileID: 11400000, guid: 493054c56b2199b4db38174042e098c2, type: 2}
   - softwareData: {fileID: 11400000, guid: f814a57432542c94fb5ecfaba2687688, type: 2}
   - softwareData: {fileID: 11400000, guid: fbba732984d8b1f448cb060be52d2e49, type: 2}
+  - softwareData: {fileID: 11400000, guid: a948a0128b3ed5d4e805a8b02ef955a2, type: 2}
   - softwareData: {fileID: 0}
-  - softwareData: {fileID: 0}
-  - softwareData: {fileID: 0}
+  - softwareData: {fileID: 11400000, guid: c0f4898246d07c846b0365ea83808c52, type: 2}
   - softwareData: {fileID: 0}
   - softwareData: {fileID: 0}
   - softwareData: {fileID: 0}

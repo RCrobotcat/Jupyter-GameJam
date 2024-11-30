@@ -33,19 +33,19 @@ public class InteractiveObject : MonoBehaviour
             originalMaterials = renderer.materials;
 
             // 创建包含 Outline 的材质列表
-            materialsWithOutline = new Material[originalMaterials.Length ];
+            materialsWithOutline = new Material[originalMaterials.Length];
             for (int i = 0; i < originalMaterials.Length; i++)
             {
                 materialsWithOutline[i] = originalMaterials[i];
             }
 
-  
-            
+
+
 
         }
 
 
-      
+
 
 
     }
@@ -75,9 +75,12 @@ public class InteractiveObject : MonoBehaviour
             {
                 if (!isMouseOver)
                 {
-                    if (AudioManager.Instance.audioClip != null)            //音乐管理器的空值保护机制
+                    if (AudioManager.Instance != null)
                     {
-                        AudioManager.Instance.OnChangeFX(AudioManager.Instance.audioClip[0].clip);
+                        if (AudioManager.Instance.audioClip != null)            //音乐管理器的空值保护机制
+                        {
+                            AudioManager.Instance.OnChangeFX(AudioManager.Instance.audioClip[0].clip);
+                        }
                     }
                     isMouseOver = true;
 
