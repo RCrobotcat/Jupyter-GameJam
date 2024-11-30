@@ -8,6 +8,8 @@ TagManager:
   - Computer
   - Bed
   - Cage
+  - node
+  - flowerPot
   layers:
   - Default
   - TransparentFX

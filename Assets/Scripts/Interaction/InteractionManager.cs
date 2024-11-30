@@ -188,6 +188,15 @@ public class InteractionManager : Singleton<InteractionManager>
             DesktopManager.Instance.isWindowOpen = true;
             UntangleController.Instance.untanglePanel.SetActive(true);
         }
+
+        // 童年时期种植花朵
+        if (obj.transform.CompareTag("flowerPot")
+            && !DesktopManager.Instance.isWindowOpen
+            && !DesktopManager.Instance.isAnimating
+            && GameManager.Instance.getSeed)
+        {
+            GameManager.Instance.raiseFlower = true;
+        }
     }
 
     // 包装器类  JSON 列表反序列化

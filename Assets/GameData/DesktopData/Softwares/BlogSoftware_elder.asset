@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20b9d2115d0a6a64a800877021ea49dc, type: 3}
-  m_Name: BlogSoftware
+  m_Name: BlogSoftware_elder
   m_EditorClassIdentifier: 
   softwareIcon: {fileID: 21300000, guid: 9412a6b07f8a32a459f938d6a9ce05dd, type: 3}
   softwareName: "\u72EC\u773C\u8BBA\u575B"
-  softwareClientInterface: {fileID: 0}
+  softwareClientInterface: {fileID: 6882368815124988010, guid: 712fd93ac51faac46b76e77c6378f359, type: 3}

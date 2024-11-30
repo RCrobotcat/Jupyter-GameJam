@@ -43,8 +43,10 @@ public class CagePasswordLock : Singleton<CagePasswordLock>
         if (UntangleController.Instance.win)
         {
             tipsText.color = Color.green;
-            tipsText.text = "小猫被成功解救了！小猫飞快地溜走了，并在地上留下了一些东西和爪印。";
+            tipsText.text = "小猫被成功解救了！小猫飞快地溜走了，并在地上留下了一袋种子和爪印。";
             LogManager.Instance.AddLogData(saveCatLog);
+
+            GameManager.Instance.getSeed = true; // 获得种子
 
             cat.transform.DOScale(Vector3.zero, 0.3f);
         }
