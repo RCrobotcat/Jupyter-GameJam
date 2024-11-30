@@ -3,38 +3,38 @@ using UnityEngine;
 
 public class ParentRaycastHover : MonoBehaviour
 {
-    public Material hoverMaterial; 
-    public Canvas targetCanvas;    
-    private Material[] originalMaterials; 
-    private Renderer[] childRenderers;    
-    private bool isHovering = false;    
-    private Camera mainCamera;            
+    public Material hoverMaterial;
+    public Canvas targetCanvas;
+    private Material[] originalMaterials;
+    private Renderer[] childRenderers;
+    private bool isHovering = false;
+    private Camera mainCamera;
 
-    private int layerMask; 
+    private int layerMask;
 
     void Start()
     {
-    
+
         mainCamera = Camera.main;
         if (mainCamera == null)
         {
             Debug.LogError("No camera tagged as 'MainCamera' found in the scene.");
         }
 
-      
+
         layerMask = LayerMask.GetMask("Default");
 
         // 获取父物体及所有子物体的 Renderer
         childRenderers = GetComponentsInChildren<Renderer>();
 
-  
+
         originalMaterials = new Material[childRenderers.Length];
         for (int i = 0; i < childRenderers.Length; i++)
         {
             originalMaterials[i] = childRenderers[i].material;
         }
 
- 
+
         if (targetCanvas != null)
         {
             targetCanvas.gameObject.SetActive(false);
@@ -43,7 +43,7 @@ public class ParentRaycastHover : MonoBehaviour
 
     void Update()
     {
-        if (mainCamera == null) return; 
+        if (mainCamera == null) return;
 
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -58,6 +58,11 @@ public class ParentRaycastHover : MonoBehaviour
                     if (transform.CompareTag("Bed") && DesktopManager.Instance.alarmSceneToBeTransited != "")
                     {
                         SceneController.Instance.TransitionToSceneHandler(DesktopManager.Instance.alarmSceneToBeTransited);
+                    }
+
+                    if (transform.CompareTag("Exit") && GameManager.Instance.loginSuccess)
+                    {
+                        SceneController.Instance.TransitionToSceneHandler("Exit");
                     }
                 }
                 if (!isHovering)
@@ -79,7 +84,7 @@ public class ParentRaycastHover : MonoBehaviour
     {
         isHovering = true;
 
-    
+
         foreach (var renderer in childRenderers)
         {
             if (renderer != null && hoverMaterial != null)
@@ -88,7 +93,7 @@ public class ParentRaycastHover : MonoBehaviour
             }
         }
 
- 
+
         if (targetCanvas != null)
         {
             targetCanvas.gameObject.SetActive(true);

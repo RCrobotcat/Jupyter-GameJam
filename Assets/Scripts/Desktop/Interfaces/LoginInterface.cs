@@ -27,7 +27,8 @@ public class LoginInterface : MonoBehaviour
             && q3.text.ToLower() == AnswerConfig.Answer_3.ToLower())
         {
             Debug.Log("Login Success");
-            // TODO
+            GameManager.Instance.loginSuccess = true;
+            SceneController.Instance.TransitionToSceneHandler("EXIT");
         }
         else
         {

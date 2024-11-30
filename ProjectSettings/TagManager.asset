@@ -10,6 +10,7 @@ TagManager:
   - Cage
   - node
   - flowerPot
+  - Exit
   layers:
   - Default
   - TransparentFX

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game/Room_elder.unity
     guid: 510f909d699ed604283e28116096b5b4
+  - enabled: 1
+    path: Assets/Scenes/Game/EXIT.unity
+    guid: c2cd8f7eb7f9b794aa511b8d742fdf44
   m_configObjects: {}

@@ -18,4 +18,9 @@ public class GameManager : Singleton<GameManager>
 
     [HideInInspector] public bool getKnife = false; // 是否获取了小刀
     [HideInInspector] public bool getFlower = false; // 是否获取了花朵
+
+    /// <summary>
+    /// 登录成功
+    /// </summary>
+    public bool loginSuccess;
 }

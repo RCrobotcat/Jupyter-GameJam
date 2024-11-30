@@ -15,5 +15,8 @@ public class RotateAroundZAxis : MonoBehaviour
 
         // 按照 Z 轴旋转
         transform.Rotate(0, 0, rotationAmount);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
     }
 }
