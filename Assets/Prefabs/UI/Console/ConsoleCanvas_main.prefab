@@ -1683,7 +1683,7 @@ MonoBehaviour:
   isWindowOpen: 0
   isOpen: 0
   isAnimating: 0
-  DesktopData: {fileID: 11400000, guid: f8bbc132e0e8dcd4d825f86e0a3a7472, type: 2}
+  DesktopData: {fileID: 11400000, guid: 6b6fdc05565753c4cad05670908651b4, type: 2}
   DesktopUI: {fileID: 4528012444946725585}
   dragCanvas: {fileID: 7276872402365352695}
   DesktopPanel: {fileID: 7640222563189869662}
@@ -2092,7 +2092,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5d19b6a837984144ca050aa96ed68499, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6c36cf583a08a2345a41ca0f0f75f4a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

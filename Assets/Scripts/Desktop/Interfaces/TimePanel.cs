@@ -103,7 +103,7 @@ public class TimePanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         DesktopManager.Instance.buttom.SetActive(false);
 
         DesktopManager.Instance.computerTipsPanel.SetActive(true);
-        DesktopManager.Instance.alarmSceneToBeTransited = "Room_main";
+        DesktopManager.Instance.alarmSceneToBeTransited = "Reality_Room_main";
     }
 
     public void ChildhoodBtnClick()

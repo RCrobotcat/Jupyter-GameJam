@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Game/MainMenu.unity
     guid: f95246f4dd8c0fc4aaa605376a908c0a
   - enabled: 1
-    path: Assets/Scenes/Game/Room_main.unity
-    guid: 07f23e50b3c1cfe4e98a1e748377a3ab
+    path: Assets/Scenes/Game/Reality_Room_main.unity
+    guid: ef468a2fa87902345acb0aa0b4d58240
   - enabled: 1
     path: Assets/Scenes/Game/Room_childhood.unity
     guid: dbad2c28b5cfa274ca5041eec8bc91b9

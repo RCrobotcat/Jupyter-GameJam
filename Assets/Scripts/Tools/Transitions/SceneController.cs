@@ -40,7 +40,7 @@ public class SceneController : Singleton<SceneController>
     {
         SceneFader fade = Instantiate(sceneFaderPrefab);
         yield return StartCoroutine(fade.FadeOut(1.5f));
-        yield return SceneManager.LoadSceneAsync("Room_main");
+        yield return SceneManager.LoadSceneAsync("Reality_Room_main");
         yield return StartCoroutine(fade.FadeIn(1.5f));
         yield break;
     }

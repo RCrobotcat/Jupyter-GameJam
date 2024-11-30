@@ -1,3 +1,4 @@
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class ParentRaycastHover : MonoBehaviour
@@ -53,6 +54,13 @@ public class ParentRaycastHover : MonoBehaviour
             // 判断是否命中当前父物体或其子物体
             if (IsChildOrSelf(hit.collider.gameObject))
             {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (transform.CompareTag("Bed") && DesktopManager.Instance.alarmSceneToBeTransited != "")
+                    {
+                        SceneController.Instance.TransitionToSceneHandler(DesktopManager.Instance.alarmSceneToBeTransited);
+                    }
+                }
                 if (!isHovering)
                 {
                     OnMouseHoverEnter();
