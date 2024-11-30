@@ -8,7 +8,7 @@ public class DesktopManager : Singleton<DesktopManager>
         public RectTransform originalParent;
     }
 
-    [HideInInspector] public bool isWindowOpen; // 是否打开了某个小窗口
+    [HideInInspector] public bool isWindowOpen = false; // 是否打开了某个小窗口
     [HideInInspector] public bool isOpen = false; // 是否打开了桌面
     [HideInInspector] public bool isAnimating = false; // 是否正在播放动画
 

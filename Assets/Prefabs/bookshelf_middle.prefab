@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 498623317709791753}
   - component: {fileID: 5813244629705393538}
   m_Layer: 0
-  m_Name: bookshelf_elder 1
+  m_Name: bookshelf_middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
