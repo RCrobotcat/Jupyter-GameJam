@@ -62,7 +62,7 @@ public class LogManager : Singleton<LogManager>
     {
         if (logList.logDatas.Find(log => log.logData == data) != null)
         {
-            Debug.Log("Already Contained this log in loglist.");
+            // Debug.Log("Already Contained this log in loglist.");
             return;
         }
 

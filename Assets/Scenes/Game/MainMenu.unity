@@ -168,6 +168,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentUserName: 
+  getSeed: 0
+  raiseFlower: 0
+  getKnife: 0
+  getFlower: 0
 --- !u!1 &706501556
 GameObject:
   m_ObjectHideFlags: 0

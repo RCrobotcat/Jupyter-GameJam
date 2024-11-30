@@ -1,6 +1,5 @@
 using UnityEngine;
 using DG.Tweening;
-using Unity.VisualScripting;
 
 public class LogGiver : MonoBehaviour
 {
@@ -43,6 +42,9 @@ public class LogGiver : MonoBehaviour
             // 按E键添加日志数据
             if (Input.GetKeyDown(KeyCode.E))
             {
+                if (logData.name == "KnifeLog")
+                    GameManager.Instance.getKnife = true;
+
                 GiveLog();
             }
         }

@@ -26,17 +26,17 @@ public class MainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             case "StartBtn":
                 Color color_start = startBtn.GetComponent<Image>().color;
-                color_start.a = 0.5f;
+                color_start.a = 0.8f;
                 startBtn.GetComponent<Image>().color = color_start;
                 break;
             case "SettingBtn":
                 Color color_setting = settingBtn.GetComponent<Image>().color;
-                color_setting.a = 0.5f;
+                color_setting.a = 0.8f;
                 settingBtn.GetComponent<Image>().color = color_setting;
                 break;
             case "QuitBtn":
                 Color color_quit = quitBtn.GetComponent<Image>().color;
-                color_quit.a = 0.5f;
+                color_quit.a = 0.8f;
                 quitBtn.GetComponent<Image>().color = color_quit;
                 break;
         }

@@ -9,10 +9,17 @@ public class LogWindow : MonoBehaviour
     public InputField passwordInput;
     public GameObject contentsPanel;
 
+    public LogData_SO logGiven;
+
     void Awake()
     {
         if (viewBtn != null)
             viewBtn.onClick.AddListener(ViewDiaryContents);
+
+        if (logGiven != null)
+        {
+            LogManager.Instance.AddLogData(logGiven);
+        }
     }
 
     void ViewDiaryContents()

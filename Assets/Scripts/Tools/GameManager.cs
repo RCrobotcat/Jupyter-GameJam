@@ -15,4 +15,7 @@ public class GameManager : Singleton<GameManager>
 
     [HideInInspector] public bool getSeed = false; // 是否获得种子
     [HideInInspector] public bool raiseFlower = false; // 是否种植花朵
+
+    [HideInInspector] public bool getKnife = false; // 是否获取了小刀
+    [HideInInspector] public bool getFlower = false; // 是否获取了花朵
 }

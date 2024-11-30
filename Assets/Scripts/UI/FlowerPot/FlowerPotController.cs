@@ -7,6 +7,9 @@ public class FlowerPotController : MonoBehaviour
     public Text flowerTips;
     public LogData_SO raiseFlowerLog;
     bool isFlowerRaised = false;
+    bool isFlowerGet = false;
+
+    public LogData_SO cutFlowerLog;
 
     public GameObject flower;
 
@@ -20,21 +23,58 @@ public class FlowerPotController : MonoBehaviour
             isFlowerRaised = true;
         }
 
+        if (GameManager.Instance.getFlower && isFlowerRaised && !isFlowerGet)
+        {
+            if (cutFlowerLog != null)
+                LogManager.Instance.AddLogData(cutFlowerLog);
+            isFlowerGet = true;
+        }
+
         if (SceneManager.GetActiveScene().name != "Room_childhood")
         {
-            if (isFlowerRaised)
+            if (!GameManager.Instance.getKnife)
             {
-                flowerTips.text = "很漂亮的紫罗兰花朵";
-                if (flower != null)
-                    flower.SetActive(true);
-                flowerTips.color = Color.magenta;
+                if (isFlowerRaised)
+                {
+                    flowerTips.text = "很漂亮的紫罗兰花朵";
+                    if (flower != null)
+                        flower.SetActive(true);
+                    flowerTips.color = Color.magenta;
+                }
+                else
+                {
+                    if (flower != null)
+                        flower.SetActive(false);
+                    flowerTips.color = Color.black;
+                    flowerTips.text = "这个花盆里什么都没有";
+                }
             }
             else
             {
-                if (flower != null)
-                    flower.SetActive(false);
-                flowerTips.color = Color.black;
-                flowerTips.text = "这个花盆里什么都没有";
+                if (isFlowerRaised)
+                {
+                    if (!isFlowerGet)
+                    {
+                        flowerTips.text = "割下一朵紫罗兰花朵";
+                        if (flower != null)
+                            flower.SetActive(true);
+                        flowerTips.color = Color.magenta;
+                    }
+                    else
+                    {
+                        flowerTips.text = "很漂亮的紫罗兰花朵";
+                        if (flower != null)
+                            flower.SetActive(true);
+                        flowerTips.color = Color.magenta;
+                    }
+                }
+                else
+                {
+                    if (flower != null)
+                        flower.SetActive(false);
+                    flowerTips.color = Color.black;
+                    flowerTips.text = "这个花盆里什么都没有";
+                }
             }
         }
     }

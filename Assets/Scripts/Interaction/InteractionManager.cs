@@ -197,6 +197,16 @@ public class InteractionManager : Singleton<InteractionManager>
         {
             GameManager.Instance.raiseFlower = true;
         }
+
+        // 割下紫罗兰花朵
+        if (obj.transform.CompareTag("flowerPot")
+            && !DesktopManager.Instance.isWindowOpen
+            && !DesktopManager.Instance.isAnimating
+            && GameManager.Instance.getKnife
+            && GameManager.Instance.raiseFlower)
+        {
+            GameManager.Instance.getFlower = true;
+        }
     }
 
     // 包装器类  JSON 列表反序列化

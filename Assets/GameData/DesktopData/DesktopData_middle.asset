@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   softwares:
   - softwareData: {fileID: 11400000, guid: 493054c56b2199b4db38174042e098c2, type: 2}
-  - softwareData: {fileID: 11400000, guid: f814a57432542c94fb5ecfaba2687688, type: 2}
-  - softwareData: {fileID: 11400000, guid: 80c0de850a7e47d4b92eed73ab743c98, type: 2}
+  - softwareData: {fileID: 11400000, guid: f8bb3c3bfbcf1c14b908dd1b12946e53, type: 2}
+  - softwareData: {fileID: 11400000, guid: 3c69320923c2c3d4d834ee931520d6b5, type: 2}
   - softwareData: {fileID: 11400000, guid: c0f4898246d07c846b0365ea83808c52, type: 2}
   - softwareData: {fileID: 0}
   - softwareData: {fileID: 0}
