@@ -1,8 +1,10 @@
 using System;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
+using UnityEngine.UI;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager: Singleton<AudioManager>
 {
     [Serializable]
     public struct AudioClips
@@ -14,13 +16,17 @@ public class AudioManager : MonoBehaviour
     [Header("基本组件")]
     public AudioMixer mixer;
     public AudioSource source_BGM;    //背景音乐
-    public AudioSource source_FX;     //其他音乐
+    public AudioSource source_FX;     //其他音乐 
+    public Slider slider;             //音乐大小控制
     [Header("基本参数")]
     public float amount;
     public AudioClips[] audioClip;
-    [Header("脚本")]
-    public UIManager uiManager;   //获取脚本
 
+    protected override void Awake()
+    {
+        base.Awake();
+        DontDestroyOnLoad(this);
+    }
     private void Update()
     {
         GetVloume();  //获取音频参数
@@ -32,7 +38,10 @@ public class AudioManager : MonoBehaviour
     }
     public void SetVloume()
     {
-        mixer.SetFloat("MasterVolume", uiManager.volumeSlider.value * 100 - 80);
+        if (slider != null)         //空值保护
+        {
+            mixer.SetFloat("MasterVolume", slider.value * 100 - 80);
+        }
     }
     public void OnChangeBGM(AudioClip audioClip)  //更换BGM
     {
