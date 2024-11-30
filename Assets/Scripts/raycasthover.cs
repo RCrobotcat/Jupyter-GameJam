@@ -2,38 +2,38 @@ using UnityEngine;
 
 public class ParentRaycastHover : MonoBehaviour
 {
-    public Material hoverMaterial; // 鼠标悬停时的材质
-    public Canvas targetCanvas;    // 要激活的 Canvas
-    private Material[] originalMaterials; // 保存子物体的原始材质
-    private Renderer[] childRenderers;    // 子物体的渲染器
-    private bool isHovering = false;      // 是否鼠标悬停
-    private Camera mainCamera;            // 主摄像机
+    public Material hoverMaterial; 
+    public Canvas targetCanvas;    
+    private Material[] originalMaterials; 
+    private Renderer[] childRenderers;    
+    private bool isHovering = false;    
+    private Camera mainCamera;            
 
-    private int layerMask; // LayerMask，只对特定层生效
+    private int layerMask; 
 
     void Start()
     {
-        // 获取主摄像机
+    
         mainCamera = Camera.main;
         if (mainCamera == null)
         {
             Debug.LogError("No camera tagged as 'MainCamera' found in the scene.");
         }
 
-        // 设置 LayerMask，仅检测 Default Layer
+      
         layerMask = LayerMask.GetMask("Default");
 
         // 获取父物体及所有子物体的 Renderer
         childRenderers = GetComponentsInChildren<Renderer>();
 
-        // 保存所有子物体的原始材质
+  
         originalMaterials = new Material[childRenderers.Length];
         for (int i = 0; i < childRenderers.Length; i++)
         {
             originalMaterials[i] = childRenderers[i].material;
         }
 
-        // 确保 Canvas 初始状态是隐藏的
+ 
         if (targetCanvas != null)
         {
             targetCanvas.gameObject.SetActive(false);
@@ -42,9 +42,8 @@ public class ParentRaycastHover : MonoBehaviour
 
     void Update()
     {
-        if (mainCamera == null) return; // 如果摄像机不存在，直接返回
+        if (mainCamera == null) return; 
 
-        // 发射 Raycast，仅针对 Default Layer
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
@@ -72,7 +71,7 @@ public class ParentRaycastHover : MonoBehaviour
     {
         isHovering = true;
 
-        // 更改所有子物体的材质
+    
         foreach (var renderer in childRenderers)
         {
             if (renderer != null && hoverMaterial != null)
@@ -81,7 +80,7 @@ public class ParentRaycastHover : MonoBehaviour
             }
         }
 
-        // 激活 Canvas
+ 
         if (targetCanvas != null)
         {
             targetCanvas.gameObject.SetActive(true);
