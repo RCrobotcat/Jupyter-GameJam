@@ -44,10 +44,6 @@ public class InteractiveObject : MonoBehaviour
 
         }
 
-
-
-
-
     }
 
     private void Update()
