@@ -21,6 +21,7 @@ public class AudioManager: Singleton<AudioManager>
     [Header("基本参数")]
     public float amount;
     public AudioClips[] audioClip;
+    public bool isFristSlider = true;
 
     protected override void Awake()
     {
@@ -29,7 +30,7 @@ public class AudioManager: Singleton<AudioManager>
     }
     private void Update()
     {
-        GetVloume();  //获取音频参数
+        GetVloume();
         SetVloume();  //设置音频参数
     }
     public void GetVloume()
@@ -38,10 +39,18 @@ public class AudioManager: Singleton<AudioManager>
     }
     public void SetVloume()
     {
-        if (slider != null)         //空值保护
+        if (slider == null)
         {
-            mixer.SetFloat("MasterVolume", slider.value * 100 - 80);
+            isFristSlider = true;
         }
+        slider = GameObject.FindWithTag("Slider").GetComponent<Slider>();
+        if (slider != null && isFristSlider)
+        {
+            slider.value = (amount + 80 )/ 100;
+            mixer.SetFloat("MasterVolume", amount);
+            isFristSlider = false;
+        }       
+        mixer.SetFloat("MasterVolume", slider.value * 100 - 80);
     }
     public void OnChangeBGM(AudioClip audioClip)  //更换BGM
     {
@@ -53,5 +62,8 @@ public class AudioManager: Singleton<AudioManager>
         source_FX.clip = audioClip;
         source_FX.Play();
     }
-
+    public void OnExitSlider()
+    {
+        slider = null;
+    }
 }
