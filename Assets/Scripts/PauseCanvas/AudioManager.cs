@@ -48,6 +48,11 @@ public class AudioManager : Singleton<AudioManager>
         {
             changedBgm = false;
         }
+
+        if (SceneManager.GetActiveScene().name == "EXIT")
+        {
+            source_BGM.Stop();
+        }
     }
     public void GetVloume()
     {
