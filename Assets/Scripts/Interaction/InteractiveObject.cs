@@ -38,10 +38,6 @@ public class InteractiveObject : MonoBehaviour
             {
                 materialsWithOutline[i] = originalMaterials[i];
             }
-
-
-
-
         }
 
     }
@@ -75,7 +71,7 @@ public class InteractiveObject : MonoBehaviour
                     {
                         if (AudioManager.Instance.audioClip != null)            //音乐管理器的空值保护机制
                         {
-                            AudioManager.Instance.OnChangeFX(AudioManager.Instance.audioClip[0].clip);
+                            AudioManager.Instance.OnChangeUI(AudioManager.Instance.audioClip[0].clip);
                         }
                     }
                     isMouseOver = true;

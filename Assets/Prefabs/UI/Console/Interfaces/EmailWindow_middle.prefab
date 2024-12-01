@@ -305,6 +305,7 @@ MonoBehaviour:
   sendBtn: {fileID: 2003876050243823197}
   page: {fileID: 655267703455181296}
   receiveEmailLog: {fileID: 11400000, guid: 6541d5cd77a1660449a60c33a98da4c5, type: 2}
+  emailSend: {fileID: 8300000, guid: 2825eb7fd8f09ee42b588df1c30c169a, type: 3}
 --- !u!1 &7275538686065913924
 GameObject:
   m_ObjectHideFlags: 0

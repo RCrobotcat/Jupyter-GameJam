@@ -9,6 +9,8 @@ public class LoginInterface : MonoBehaviour
     public InputField q2;
     public InputField q3;
 
+    public AudioClip endClip;
+
     void Awake()
     {
         loginButton.onClick.AddListener(Login);
@@ -28,6 +30,7 @@ public class LoginInterface : MonoBehaviour
         {
             Debug.Log("Login Success");
             GameManager.Instance.loginSuccess = true;
+            AudioManager.Instance.OnChangeFX(endClip);
             SceneController.Instance.TransitionToSceneHandler("EXIT");
         }
         else

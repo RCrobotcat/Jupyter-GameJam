@@ -978,6 +978,7 @@ MonoBehaviour:
   q1: {fileID: 8258835978156544080}
   q2: {fileID: 2905072274147114608}
   q3: {fileID: 3269776845351795840}
+  endClip: {fileID: 8300000, guid: 338c22f9fc702de43bf35ec09b8e423f, type: 3}
 --- !u!1 &5005833454472878473
 GameObject:
   m_ObjectHideFlags: 0

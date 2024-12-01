@@ -18,6 +18,8 @@ public class CagePasswordLock : Singleton<CagePasswordLock>
     public InputField passwordInput;
     public Button unlockBtn;
 
+    public AudioClip catMiao;
+
     protected override void Awake()
     {
         base.Awake();
@@ -48,6 +50,7 @@ public class CagePasswordLock : Singleton<CagePasswordLock>
 
             GameManager.Instance.getSeed = true; // 获得种子
 
+            AudioManager.Instance.OnChangeUI(catMiao);
             cat.transform.DOScale(Vector3.zero, 0.3f);
         }
     }

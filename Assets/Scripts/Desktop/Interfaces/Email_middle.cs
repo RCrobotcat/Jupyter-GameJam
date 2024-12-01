@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +15,8 @@ public class Email_middle : MonoBehaviour
     public LogData_SO receiveEmailLog;
 
     bool isSend = false;
+
+    public AudioClip emailSend;
 
     void Awake()
     {
@@ -42,6 +42,7 @@ public class Email_middle : MonoBehaviour
         if (GameManager.Instance.getFlower)
         {
             isSend = true;
+            AudioManager.Instance.OnChangeUI(emailSend);
             page.sprite = receivePage;
             if (receiveEmailLog != null)
                 LogManager.Instance.AddLogData(receiveEmailLog);

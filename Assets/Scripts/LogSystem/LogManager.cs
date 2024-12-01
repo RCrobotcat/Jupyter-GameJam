@@ -17,6 +17,7 @@ public class LogManager : Singleton<LogManager>
     public Animator logPanelAnimator;
     [HideInInspector] public bool isOpen = false;
     [HideInInspector] public bool isAnimating = false;
+    public AudioClip openSound;
 
     [Header("Log Name")]
     public LogNameBtn logNameBtn;
@@ -48,6 +49,7 @@ public class LogManager : Singleton<LogManager>
             }
             else
             {
+                AudioManager.Instance.OnChangeUI(openSound);
                 logPanel.SetActive(isOpen);
             }
 

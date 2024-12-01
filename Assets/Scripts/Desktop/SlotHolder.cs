@@ -11,6 +11,7 @@ public class SlotHolder : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     {
         if (eventData.clickCount % 2 == 0 && !DesktopManager.Instance.isWindowOpen)
         {
+            AudioManager.Instance.OnChangeUI(DesktopManager.Instance.clickInterface);
             UseSoftware();
         }
     }

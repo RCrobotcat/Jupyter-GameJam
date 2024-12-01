@@ -1693,6 +1693,9 @@ MonoBehaviour:
   buttom: {fileID: 96924229421160790}
   DesktopUIAnimator: {fileID: 8993966738163356286}
   computerTipsPanel: {fileID: 0}
+  openDesktopClip: {fileID: 8300000, guid: 258a7deaa9d459a44862eb45d479c6d9, type: 3}
+  clickInterface: {fileID: 8300000, guid: 7e80fca244691af4f88628db264cb20c, type: 3}
+  clickTime: {fileID: 8300000, guid: c0a9e2cc7cba2ae42b5a5a2f1801724d, type: 3}
   alarmSceneToBeTransited: 
 --- !u!1 &5446064555952441370
 GameObject:

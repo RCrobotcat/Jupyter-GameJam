@@ -293,6 +293,7 @@ MonoBehaviour:
   logPanelAnimator: {fileID: 6045412625086620453}
   isOpen: 0
   isAnimating: 0
+  openSound: {fileID: 8300000, guid: 86e5f90578577a34e84690dc43d7de76, type: 3}
   logNameBtn: {fileID: 8876465174178844537, guid: 0ae59f2b253e15d4e99fd0020c96e870, type: 3}
   logListTransform: {fileID: 7801464554912558276}
   logContentText: {fileID: 4249978056530109408}

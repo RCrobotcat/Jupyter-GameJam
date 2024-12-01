@@ -373,6 +373,7 @@ MonoBehaviour:
   cat: {fileID: 7080014712421748459}
   passwordInput: {fileID: 6681451103961461728}
   unlockBtn: {fileID: 1387607669993680348}
+  catMiao: {fileID: 8300000, guid: 42d12aaa3c22f924899bc10805ea9325, type: 3}
 --- !u!1 &1369785615955192899
 GameObject:
   m_ObjectHideFlags: 0

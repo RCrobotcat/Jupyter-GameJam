@@ -67,6 +67,13 @@ public class ParentRaycastHover : MonoBehaviour
                 }
                 if (!isHovering)
                 {
+                    if (AudioManager.Instance != null && !DesktopManager.Instance.isOpen)
+                    {
+                        if (AudioManager.Instance.audioClip != null)            //音乐管理器的空值保护机制
+                        {
+                            AudioManager.Instance.OnChangeUI(AudioManager.Instance.audioClip[0].clip);
+                        }
+                    }
                     OnMouseHoverEnter();
                 }
                 return;

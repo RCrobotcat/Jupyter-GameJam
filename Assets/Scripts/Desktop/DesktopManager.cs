@@ -35,6 +35,11 @@ public class DesktopManager : Singleton<DesktopManager>
     [Header("WorldSpace Tips Panel")]
     public GameObject computerTipsPanel;
 
+    [Header("Audio Clips")]
+    public AudioClip openDesktopClip;
+    public AudioClip clickInterface;
+    public AudioClip clickTime;
+
     /// <summary>
     /// 即将要传送的场景
     /// </summary>
@@ -74,6 +79,7 @@ public class DesktopManager : Singleton<DesktopManager>
         }
         else
         {
+            AudioManager.Instance.OnChangeUI(openDesktopClip);
             DesktopPanel.SetActive(isOpen);
             CloseBtn.SetActive(isOpen);
             buttom.SetActive(isOpen);

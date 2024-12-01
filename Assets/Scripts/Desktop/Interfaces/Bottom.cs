@@ -45,6 +45,7 @@ public class Bottom : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             }
             else
             {
+                AudioManager.Instance.OnChangeUI(DesktopManager.Instance.clickTime);
                 TimePanel.SetActive(timePanelIsOpen);
             }
         }

@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneController : Singleton<SceneController>
@@ -6,6 +7,7 @@ public class SceneController : Singleton<SceneController>
     public SceneFader sceneFaderPrefab;
 
     public LogList_SO logList;
+    public AudioClip transitSound;
 
     protected override void Awake()
     {
@@ -19,6 +21,7 @@ public class SceneController : Singleton<SceneController>
     /// <param name="SceneName">要传送到的场景名字</param>
     public void TransitionToSceneHandler(string SceneName)
     {
+        AudioManager.Instance.OnChangeFX(transitSound);
         StartCoroutine(TransitionToScene(SceneName));
     }
     IEnumerator TransitionToScene(string SceneName)
