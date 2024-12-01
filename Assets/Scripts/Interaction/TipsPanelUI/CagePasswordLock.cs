@@ -50,7 +50,7 @@ public class CagePasswordLock : Singleton<CagePasswordLock>
 
             GameManager.Instance.getSeed = true; // 获得种子
 
-            AudioManager.Instance.OnChangeUI(catMiao);
+            AudioManager.Instance.OnChangeFX(catMiao);
             cat.transform.DOScale(Vector3.zero, 0.3f);
         }
     }

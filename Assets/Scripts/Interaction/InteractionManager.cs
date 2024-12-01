@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class InteractionManager : Singleton<InteractionManager>
 {
@@ -193,7 +194,8 @@ public class InteractionManager : Singleton<InteractionManager>
         if (obj.transform.CompareTag("flowerPot")
             && !DesktopManager.Instance.isWindowOpen
             && !DesktopManager.Instance.isAnimating
-            && GameManager.Instance.getSeed)
+            && GameManager.Instance.getSeed
+            && SceneManager.GetActiveScene().name == "Room_childhood")
         {
             GameManager.Instance.raiseFlower = true;
         }

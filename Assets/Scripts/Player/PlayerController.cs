@@ -41,19 +41,22 @@ public class PlayerController : MonoBehaviour
         Vector3 inputDirection = new Vector3(horizontal, 0, 0);
         if (inputDirection != Vector3.zero)
         {
+            Vector3 CamRelativeMove = ConvertToCameraSpace(inputDirection);
+            MovePlayer(CamRelativeMove);
+        }
+        animator.SetFloat("Speed", agent.velocity.magnitude);
+
+        if (agent.velocity.magnitude >= 0.1f)
+        {
             if (!AudioManager.Instance.source_FX.isPlaying)
             {
                 AudioManager.Instance.OnChangeFX(AudioManager.Instance.audioClip[3].clip);  //“Ù–ß≤•∑≈
             }
-
-            Vector3 CamRelativeMove = ConvertToCameraSpace(inputDirection);
-            MovePlayer(CamRelativeMove);
         }
         else if (AudioManager.Instance.source_FX.clip == AudioManager.Instance.audioClip[3].clip)
         {
             AudioManager.Instance.source_FX.Stop();
         }
-        animator.SetFloat("Speed", agent.velocity.magnitude);
 
         if (horizontal < 0)
         {

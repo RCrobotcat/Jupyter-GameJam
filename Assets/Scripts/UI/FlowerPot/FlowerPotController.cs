@@ -6,7 +6,6 @@ public class FlowerPotController : MonoBehaviour
 {
     public Text flowerTips;
     public LogData_SO raiseFlowerLog;
-    bool isFlowerRaised = false;
     bool isFlowerGet = false;
 
     public LogData_SO cutFlowerLog;
@@ -15,26 +14,24 @@ public class FlowerPotController : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Instance.raiseFlower && !isFlowerRaised)
+        if (GameManager.Instance.raiseFlower)
         {
             flowerTips.text = "花朵种植成功！";
             if (raiseFlowerLog != null)
                 LogManager.Instance.AddLogData(raiseFlowerLog);
-            isFlowerRaised = true;
         }
 
-        if (GameManager.Instance.getFlower && isFlowerRaised && !isFlowerGet)
+        if (GameManager.Instance.getFlower)
         {
             if (cutFlowerLog != null)
                 LogManager.Instance.AddLogData(cutFlowerLog);
-            isFlowerGet = true;
         }
 
         if (SceneManager.GetActiveScene().name != "Room_childhood")
         {
             if (!GameManager.Instance.getKnife)
             {
-                if (isFlowerRaised)
+                if (GameManager.Instance.raiseFlower)
                 {
                     flowerTips.text = "很漂亮的紫罗兰花朵";
                     if (flower != null)
@@ -51,9 +48,9 @@ public class FlowerPotController : MonoBehaviour
             }
             else
             {
-                if (isFlowerRaised)
+                if (GameManager.Instance.raiseFlower)
                 {
-                    if (!isFlowerGet)
+                    if (!GameManager.Instance.getFlower)
                     {
                         flowerTips.text = "割下一朵紫罗兰花朵";
                         if (flower != null)
